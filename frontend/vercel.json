@@ -1,0 +1,17 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "routes": [
+    {
+      "src": "/typing-test/(1|5|10)-minute/?$",
+      "dest": "/typing-test/$1-minute/index.html"
+    },
+    {
+      "src": "/(typing-test|typing-speed-tips|history|about|contact|privacy|terms|cookies|disclaimer)/?$",
+      "dest": "/$1/index.html"
+    },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "status": 404, "dest": "/404.html" }
+  ]
+}
